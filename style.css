@@ -1,0 +1,438 @@
+:root {
+    /* colores*/
+    --bitcoin-orange: #F7931A; /*variable*/
+    --soft-orange: #FFe9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #fff;
+
+}
+
+* { /* selector univesal*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "dm sans", sans-serif;
+
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px; /* la dimension mas chica de los celulares 320px*/
+    height: 350px;
+    text-align: center;
+    background: url(./pic/tubalcain.PNG); /*linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    color: var(--off-white);
+    font-size: large;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    
+}
+
+main {
+    width: 100%;
+    height: auto;
+   /* background-color: var(--off-white);*/
+}
+
+.main-exchange-container--title {
+    width: 100%;
+    height: 70px;
+    min-width: 320px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    /*background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    Background-color: transparent; 
+    color: var(--off-white);
+   /* font-size: large; */
+    text-shadow: 0.1em 0.1em 0.2em black;
+    animation-duration: 10s;
+    animation-name: slidein;
+    align-items: center;
+    display: flex;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+    color: var(--off-white);
+   /* font-size: large; */
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+/* estilo de opciones*/
+
+.main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.plans--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.plans--title h2 {
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--off-white);
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.plans--title p {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+/* tamaño de las fotos de los aceros */ 
+
+.imgaceros{
+    width: 150px;
+    height: 150px;
+  }
+
+
+
+/* estilo del redondo*/
+
+.plans-container--card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 5px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.recommended {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    left: calc(50% - 60px);
+    top: -15px;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    color: var(--just-white);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.plan-card--title {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan-card--price {
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: black;
+}
+
+.plan-card--price span {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 5px;
+    height: 5px;
+    top: 40px;
+    left: 50px;
+}
+
+.plan-card--saving {
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+
+
+  /* boton excoge uno1*/
+.plan-card--ca {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    background-color: var(--bitcoin-orange);
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.plan-card--ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    
+    vertical-align: text-bottom;
+}
+
+/* estilo del cuadrado */
+
+.plans-container--card2 {
+    position: relative;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 5px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.basic {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    left: calc(50% - 60px);
+    top: -15px;
+    background-color: var(--secondary-blue);
+    border-radius: 8px;
+    color: var(--just-white);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.plan-card--title2 {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan-card--price2 {
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: black;
+}
+
+.plan-card--price2 span {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 8px;
+    height: 5px;
+    top: 40px;
+    left: 50px;
+}
+
+.plan-card--saving2 {
+    font-size: 1.2rem;
+    color: #757575;
+}
+/* boton excoge uno2*/
+.plan-card--ca2 {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    background-color: var(--secondary-blue);
+    border: 2px solid var(--secondary-blue);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.plan-card--ca2 span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+   /* background-image: url(./assets/icons/orange-right-arrow.svg); */
+    vertical-align: text-bottom;
+}
+
+/* estilo del hexagonal */ 
+
+.plans-container--card3 {
+    position: relative;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 5px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.plus {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    left: calc(50% - 60px);
+    top: -15px;
+    background-color: var(--warm-black);
+    border-radius: 8px;
+    color: var(--just-white);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.plan-card--title3 {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan-card--price3 {
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: black;
+}
+
+.plan-card--price3 span {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 8px;
+    height: 5px;
+    top: 40px;
+    left: 45px;
+}
+
+.plan-card--saving3 {
+    font-size: 1.2rem;
+    color: #757575;
+}
+/* boton excoge uno3*/
+.plan-card--ca3 {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    background-color: var(--warm-black);
+    border: 2px solid var(--warm-black);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.plan-card--ca3 span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/icons/orange-right-arrow.svg);
+    vertical-align: text-bottom;
+}
+
+/* scroll */
+
+.plans-container--slider {
+    display: flex;
+    height: 316px;
+    overflow-x: scroll; /* asi se hace el srcoll vertical para el horizontal seria (overflow-y: scroll)*/
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+/* estilo de footer */
+
+footer {
+    display: flex;
+    min-width: 320px; 
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(207.8deg, #F7931A 60%, #201E1C 100%);
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+  /*  min-width: 320px;  */
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+    color: var(--just-white);
+    text-shadow: 0.15em 0.25em 0.5em black;
+}
+
+.left li {
+    margin: 10px 0;
+}
+
+.left a {
+    text-decoration: none;
+    color: var(--just-white);
+}
+
+/* tamaño de las fotos de los aceros */ 
+
+
+
+.serpiente{
+    width: 100px;
+    height: 100px;
+   
+  }
