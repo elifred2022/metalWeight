@@ -1,0 +1,24 @@
+var operacion = "";
+    var res;
+    var opc = "";
+    switch (densidad) {
+        case "acero":
+            operacion = resultado;
+            res = 7850 * valueLargo * (valueLadoA * valueLadoB); //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
+        break;
+        case aluminio:
+            res = 2700 * valueLargo * (valueLadoA * valueLadoB); //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
+        break;
+        case Hierro:
+            res = 7300 * valueLargo * (valueLadoA * valueLadoB); //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
+        break;
+        case laton:
+            res = 8500 * valueLargo * (valueLadoA * valueLadoB); //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
+        break;
+        default:
+          alert("no existe"); //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+        break;
+      }
+      return res;
+    
+    formula general de peso; peso = densidad * longitud * seccion;

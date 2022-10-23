@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de peso de metales; masisos, cuadrados y rectangulares</title>
+    <link rel="stylesheet" href="cuadrado.css">
+</head>
+<body>
+    <header>
+        <h1>Calculo de peso de metales; masisos, cuadrados y rectangulares</h1>
+        
+    </header>
+
+    <section>
+        <h2>Calcula el peso de tu material</h2>
+
+        <form class="" action="">
+            <table>
+                <label for="inputLadoA">Ingresa medida lado A;</label>
+                <input id="inputLadoA" type="number">
+    
+                <label for="inputLadoB">Ingresa medida lado B;</label>
+                <input id="inputLadoB" type="number">
+    
+                <label for="inputLargo">Ingresa medida largo;</label>
+                <input id="inputLargo" type="number">
+            </table>
+            
+            
+
+            <form action="">
+                <label for="inputMaterial">Indique tipo de material (Acero, Aluminio, Hierro, Laton);</label>
+                
+                <select name="PAISES" id="inputMaterial">
+                    <option value="Acero">Acero</option>
+                    <option value="Aluminio">Aluminio</option>
+                    <option value="Hierro">Hierro</option>
+                    <option value="Laton">Laton</option>
+                </select>
+            </form>
+           
+            
+            <button type="button" onclick="onClickbutton()">
+                Calcular pesaje
+            </button>
+
+            <p id="ResultP"></p>
+        </form>
+    </section>
+    
+
+    <script src="cuadrado.js"></script>
+    
+</body>
+</html>
