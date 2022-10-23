@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metalWeight cuadrado</title>
+    <link rel="stylesheet" href="cuadrado.css">
+</head>
+<body>
+    <header>
+        <h1>Calculo de peso de metales; masisos, cuadrados y rectangulares</h1>
+        <a href="/index.html">Home</a>
+    </header>
+   
+    <main>
+        <div class="main-exchange-container--title">
+
+           
+           
+            <h2 class="">Ingresa las medidas</h2>
+                     
+        </div>
+
+        
+
+        <section class="main-tables-container">
+           
+             
+            
+            <section id="plans" class="main-plans-container">
+                <div class="main-currency-table">
+                           
+                    <form class="currency-table--container" action="">
+                        <div>
+                        <table>
+                            <label class="table__top-left" for="inputLadoA">Medida lado A;</label>
+                            <input class="table__top-right table__right" id="inputLadoA" type="number">
+                            <br>
+                            <label class="table__top-left2" for="inputLadoB">Medida lado B;</label>
+                            <input class="table__top-right table__right" id="inputLadoB" type="number">
+                            <br>
+                            <label for="inputLargo">Medida largo;</label>
+                            <input id="inputLargo" type="number">
+                        </table>
+                        
+                        <form action="">
+                            <label for="inputUm">Unidad de medida;</label>
+                            
+                            <select name="unidadMedida" id="inputUm">
+                                <option value="Milimetro">Mm</option>
+                                <option value="Centimetro">Cm</option>
+                                <option value="Metro">Mt</option>
+                            </select>
+                        </form>
+            
+                        <form action="">
+                            <label for="inputMaterial">Material;</label>
+                            
+                            <select name="material" id="inputMaterial">
+                                <option value="Acero">Acero</option>
+                                <option value="Aluminio">Aluminio</option>
+                                <option value="Hierro">Hierro</option>
+                                <option value="Laton">Laton</option>
+                            </select>
+                        </form>
+                       
+                      </div> 
+        
+        
+                </div>
+                
+            </section>   
+          
+            <section>
+                <button class="boton" type="button" onclick="onClickbutton()">
+                    Calcular pesaje
+                </button>
+        
+                <p class="respuesta" id="ResultP"></p>
+        
+            </section>
+            
+        </form>
+        
+        </section>
+    
+        <section class="fotoMetales">
+            <div>
+                <img src="/pic/metalesvarioscuadrados/cuadroLados.png" alt="">
+                
+            </div>
+        </section>
+        
+    </main>
+   
+
+    
+
+    <script src="cuadrado.js"></script>
+
+    <footer>
+        
+        <section class="left">
+            
+            <ul>
+                <h3>Proyecto Elaborado por el Desarrollador: </h3>
+                <h3>Eliezer Martinez</h3>
+                <li><a href="https://www.linkedin.com/in/eliezer-f-martinez-l-62374a127/">Sigueme en linkedin</a></li>
+                <li><a href="https://github.com/elifred2022">Enlace con Github</a></li>
+                
+                
+            </ul>
+        </section>
+        <section class="right">
+            <img class="serpiente" src="/pic/serpiente.PNG" alt="">
+        </section>
+    </footer>    
+    
+</body>
+</html>

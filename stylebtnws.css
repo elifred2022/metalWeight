@@ -10,8 +10,8 @@
     position: fixed;
     z-index: 999;
     border-radius: 50%;
-    bottom: 150px;
-    right: 25px;
+    bottom: 25px;
+    right: 50px;
     padding: 25px;
     transition: ease 0.3s;
     animation: efecto 1.2s infinite;
@@ -23,7 +23,7 @@
 }
 
 .boton{
-    width: 40px;
+    width: 20px;
     transition: ease 1s;
 }
 
