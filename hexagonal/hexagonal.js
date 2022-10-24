@@ -2,49 +2,48 @@ const um = [
     "Milimetro",
     "Centimetro",
     "Metro",
-];
-
-const material = [
+  ];
+  
+  const material = [
     "Acero",
     "Aluminio",
     "Hierro",
     "Laton",
-];
- 
-   
-
- function calcularPeso(ladoAvalue, ladoBvalue, largoValue, densidad) {
-    const pesoMaterial = densidad * (ladoAvalue * ladoBvalue) * largoValue;
-
+  ];
+  
+   // raiz cuadrada de 3 = 1,73205080757
+   // se calculo la seccion = raiz cuadrada de 3 / 2 * altura * altura
+  
+  function calcularPeso(alturaValue, largoValue, densidad) {
+    const pesoMaterial = densidad * largoValue * (0.866 * alturaValue * alturaValue);
+  
     return pesoMaterial;
     // peso = densidad * longitud * seccion;
+  
    // const pesoMaterialmm = pesoMaterial / 1000000000; // para el calculo de mm es; 0.000007850
    // return pesoMaterialmm;
- }
-
-
-
- 
+  }
   
- function onClickbutton() {
-     const inputLadoA = document.getElementById("inputLadoA");
-     const ladoAvalue = inputLadoA.value;
-
-     const inputLadoB = document.getElementById("inputLadoB");
-     const ladoBvalue = inputLadoB.value;
-
+  
+  
+  
+  
+  function onClickbutton() {
+     const inputLadoAltura = document.getElementById("inputLadoAltura");
+     const alturaValue = inputLadoAltura.value;
+  
      const inputLargo = document.getElementById("inputLargo");
      const largoValue = inputLargo.value;
-
+  
      const inputUm = document.getElementById("inputUm");
      const inputUmValue = inputUm.value;
- 
+  
      const inputMaterial = document.getElementById("inputMaterial");
      const materialValue = inputMaterial.value;
- 
+  
      let densidad;
      
- 
+  
      
      switch(materialValue) {
        case material[0]: //"aca se evidencia cuando declaramos las constantes arriba empiezan desde el 0, 1 y 2, osea Barby es el 0"
@@ -60,9 +59,9 @@ const material = [
        densidad = 0.000008560;
        break; 
     }
- 
+  
      
-     const pesoMaterial = calcularPeso(ladoAvalue, ladoBvalue, largoValue, densidad);
+     const pesoMaterial = calcularPeso(alturaValue, largoValue, densidad);
      
      switch(inputUmValue) {
         case um[0]: 
@@ -82,4 +81,4 @@ const material = [
      const ResultP = document.getElementById ("ResultP");
      ResultP.innerText = "El peso del material es: " + conDecimal + " Kgs"; 
      }
- 
+  
