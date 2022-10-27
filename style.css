@@ -33,7 +33,9 @@ body {
 
 .header-menu {
     position: absolute;
-    justify-items: right;
+    display: flex; /* para colocar el menu hamburguesa a la dercha */
+    flex-direction: column-reverse; /* para colocar el menu hamburguesa a la dercha */
+    align-items: flex-end; /* para colocar el menu hamburguesa a la dercha */
     background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
     height: 60px;
     width: 100%;
