@@ -645,4 +645,8 @@ footer .left ul {
   left: 0;
 }
 
+.nav-toggle:focus:not(:focus-visible) { /* funcionalidad para navegar con tabulador */
+  outline: none;
+}
+
 }
