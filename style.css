@@ -519,9 +519,37 @@ footer .left ul {
     color: var(--just-white);
 }
 
-/* tamaño de las fotos de los aceros */ 
+/*  ESTILO DEL FORMULARIO ---ESTILO DEL FORMULARIO------PC----------------*/
 
+#opacidad { /* para q no se vea la etiqueta a del enlace para enviar el formulario*/
+  opacity: 0;
+  text-decoration: none;
+}
 
+.form {
+  display: flex;
+  flex-direction: column;   /* esto cloca de lado a lado los elementos*/
+  max-width: 992px; /* este numero 992px es por convencion*/
+  margin: 0 auto;
+  color: var(--just-white);
+  text-shadow: 0.15em 0.25em 0.5em black;
+
+}
+
+.btn-primary-full {
+  /*position: relative;*/
+  display: flex;
+  flex-direction:column;
+  justify-content:center; 
+  width: 60px; 
+  border-radius: 5px;
+  color: var(--off-white);
+  font-size: large;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  background: linear-gradient(207.8deg, #b4b1af 16.69%, #a19f9c 100%);
+}
+
+/* ESTILO DE LA SERPIENTE */
 
 .serpiente{
     width: 100px;
@@ -836,12 +864,43 @@ footer .left ul {
     }
     
     
+/*  ESTILO DEL FORMULARIO ---ESTILO DEL FORMULARIO------celu----------------*/
+
+
+
+.form {
+  display: flex;
+  width: 150px;
+  flex-direction: column;   /* esto cloca de lado a lado los elementos*/
+  max-width: 400px; /* este numero 992px es por convencion*/
+  margin: 0 auto;
+  color: var(--just-white);
+  text-shadow: 0.15em 0.25em 0.5em black;
+ /* font-size: 15px;*/
+
+}
+
+.btn-primary-full {
+  /*position: relative;*/
+  display: flex;
+  flex-direction:column;
+  justify-content:center; 
+  width: 60px; 
+  border-radius: 5px;
+  color: var(--off-white);
+  font-size: large;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  background: linear-gradient(207.8deg, #b4b1af 16.69%, #a19f9c 100%);
+}
     
+  /* ESTILOD E LA SERPIENTE CELULARES RESPONSIVE */ 
     .serpiente{
       width: 50px;
       height: 50px;
+      
     }
-    
+   /* ****************************************************/
+
     .nav-toggle {
       display: block;
     }
