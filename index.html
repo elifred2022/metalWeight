@@ -22,7 +22,7 @@
                 <li class="nav-menu-item"><a href="./redondo/redondo.html" class="nav-menu-link">Redondo</a></li>
                 <li class="nav-menu-item"><a href="./cuadrado/cuadrado.html" class="nav-menu-link">Cuadrado</a></li>
                 <li class="nav-menu-item"><a href="./hexagonal/hexagonal.html" class="nav-menu-link">Hexagonal</a></li>
-                <li class="nav-menu-item"><a href="" class="nav-menu-link">Contactos</a></li>
+                <li class="nav-menu-item"><a href="./Contacto/contacto.html" class="nav-menu-link">Contactos</a></li>
             </ul>
         </nav>
      </header>
@@ -114,17 +114,7 @@
                 
             </ul>
         </section>
-        <form id="form" action="" class="form">
-            <h3 class="tag"><span>Contactenos</span></h3>
-            <label for="name">Nombre y apellido<span>*</span></label>
-            <input name="name" required type="text" id="name">
-            <label for="email">Correo electronico<span>*</span></label>
-            <input name="email" type="text" id="email" required>
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" cols="30" rows="10"></textarea>
-            <button type="submit" class="btn-primary-full">Enviar</button>
-        </form>
-        <a href="mailto:elifredmason@gmail.com" id="opacidad">mail</a>
+       
 
         <section class="right">
             <img class="serpiente" src="./pic/serpiente.PNG" alt="">
@@ -133,20 +123,7 @@
 
     </footer>
 
-    <script>
-        const $form = document.querySelector('#form')
-        const $buttonMailto = document.querySelector('#opacidad')
-
-        $form.addEventListener('submit', handleSubmit)
-
-        function handleSubmit(event) {
-            event.preventDefault()
-            const form = new FormData(this)
-           // console.log(form.get('name')) 
-            $buttonMailto.setAttribute('href', `mailto:elifredmason@gmail.com?subject=${form.get('name')}${form.get('email')}&body=${form.get('message')}`)
-            $buttonMailto.click()
-        }
-    </script>
+   
     
 </body>
 </html>

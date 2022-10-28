@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metalWeight cuadrado</title>
+    <link rel="stylesheet" href="contacto.css">
+    <script src="https://kit.fontawesome.com/3904b0e961.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header-menu">
+        <nav class="nav">
+            <a href="../index.html" class="home">Home</a>
+            <button class="nav-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="../redondo/redondo.html" class="nav-menu-link">Redondo</a></li>
+                <li class="nav-menu-item"><a href="../cuadrado/cuadrado.html" class="nav-menu-link">Cuadrado</a></li>
+                <li class="nav-menu-item"><a href="../hexagonal/hexagonal.html" class="nav-menu-link">Hexagonal</a></li>
+                <li class="nav-menu-item"><a href="" class="nav-menu-link nav-menu-link_active">Contactos</a></li>
+            </ul>
+        </nav>
+     </header>
+    <header class="header-titulo">
+        <h1>Contactenos</h1>
+    </header>
+   
+    <main>
+              
+
+        <section class="main-tables-container">
+           
+            <section id="plans" class="main-plans-container">
+                <div class="main-currency-table">
+
+                    <form id="form" action="" class="form">
+                        
+                        <label for="name">Nombre y apellido<span>*</span></label>
+                        <input name="name" required type="text" id="name">
+                        <label for="email">Correo electronico<span>*</span></label>
+                        <input name="email" type="text" id="email" required>
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                        <button type="submit" class="btn-primary-full">Enviar</button>
+                    </form>
+                    <a href="mailto:elifredmason@gmail.com" id="opacidad">mail</a>
+                           
+                  
+                       
+                </div> 
+        
+        
+                </div>
+                
+            </section>    
+            
+            <script>
+                const $form = document.querySelector('#form')
+                const $buttonMailto = document.querySelector('#opacidad')
+        
+                $form.addEventListener('submit', handleSubmit)
+        
+                function handleSubmit(event) {
+                    event.preventDefault()
+                    const form = new FormData(this)
+                   // console.log(form.get('name')) 
+                    $buttonMailto.setAttribute('href', `mailto:elifredmason@gmail.com?subject=${form.get('name')}${form.get('email')}&body=${form.get('message')}`)
+                    $buttonMailto.click()
+                }
+            </script>
+            
+                     
+            
+        </form>
+        
+        </section>
+    
+      
+        
+    </main>
+   
+
+    
+
+    
+    <script src="menuHamburguesa.js"></script>
+
+    <footer>
+        
+        <section class="left">
+            
+            <ul>
+                <h3>Proyecto Elaborado por el Desarrollador: </h3>
+                <h3>Eliezer Martinez</h3>
+                <li><a href="https://www.linkedin.com/in/eliezer-f-martinez-l-62374a127/">Sigueme en linkedin</a></li>
+                <li><a href="https://github.com/elifred2022">Enlace con Github</a></li>
+                
+                
+            </ul>
+        </section>
+        <section class="right">
+            <img class="serpiente" src="./pic/serpiente.PNG" alt="">
+        </section>
+    </footer>    
+    
+</body>
+</html>

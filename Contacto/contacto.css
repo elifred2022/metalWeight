@@ -1,0 +1,662 @@
+:root {
+    /* colores*/
+    --bitcoin-orange: #F7931A; /*variable*/
+    --soft-orange: #FFe9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #fff;
+  
+  }
+  
+  * { /* selector univesal*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+    
+  }
+  
+  body {
+    font-family: sans-serif;
+   /* padding: 90px 20px 0;  */
+    background: url(./pic/fundicion.PNG);  
+  }
+  
+  
+  
+  .header-menu {
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+    height: 80px;
+    width: 100%;
+    position: fixed; /* para q la barra del menu se quede fija */
+    top: 0;
+    left: 0;
+    }
+  
+  header a {
+  text-decoration: none;
+  color: var(--just-white);
+  width: 20px;
+  /*font-size: 35px;*/
+  
+  }
+  
+  /* estilo de la barra del menu arriba */
+  .nav {
+    display: flex;
+    justify-content: space-between;  /* esto cloca de lado a lado los elementos*/
+    max-width: 992px; /* este numero 992px es por convencion*/
+    margin: 0 auto;
+  }
+  
+  
+  .home {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px; /* queda centrado el objeto entre ariba y abajo */
+  }
+  
+  .nav-menu {
+    
+    display: flex;
+    margin-right: 40px;
+    list-style: none; /* elimina los puntitos de los elemntos en listas*/
+  }
+  
+  .nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+    
+  }
+  
+  .nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+   
+  }
+  
+  .nav-menu-link:hover, 
+  .nav-menu-link_active {   /* .nav-menu-link_active */
+    background-color: #a19f9c; 
+    transition: 0.5s;
+   
+  }
+  
+  
+  /*  estilos del header principal */
+  .header-titulo {
+   /* position: relative;*/ /*lo quite el position por q no dejaba colocar el header del menu arriba*/
+    display: flex;
+    flex-direction:column-reverse;
+   /* justify-content: center;
+    width: 100%;
+    min-width: 320px; /* la dimension mas chica de los celulares 320px*/
+    height: 200px;
+    text-align: center;
+   /* background: url(./pic/fundicion.PNG); /*linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    color: var(--off-white);
+    font-size: large;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    line-height: 80px;
+  }
+  
+  
+  
+  main {
+    
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+   /* background-color: var(--off-white);*/
+  
+  }
+  
+  .main-exchange-container--title {
+    width: 100%;
+    height: 100px;
+    min-width: 320px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    /*background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    Background-color: transparent; 
+    background: url(./pic/rayas.PNG);
+    color: var(--off-white);
+   /* font-size: large; */
+    text-shadow: 0.1em 0.1em 0.2em black;
+    animation-duration: 10s;
+    animation-name: slidein;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  
+  
+  /* animacion de la cinta */
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  /* estilo de la tabla */
+  
+  .main-tables-container {
+    margin-top: 20px; 
+    margin-bottom: 0px;
+    display: flex;
+    width: 100%;
+    height: 130px;
+    justify-content: center;
+  /*   overflow-x: scroll; /* asi se hace el srcoll vertical para el horizontal seria (overflow-y: scroll)*/
+    overscroll-behavior-x: contain;
+   /* scroll-snap-type: x proximity;*/
+    background: transparent; /*linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);*/
+  }
+  
+  
+  
+  
+  .form {
+    display: flex;
+    width: 300px;
+    flex-direction: column;   /* esto cloca de lado a lado los elementos*/
+    max-width: 400px; /* este numero 992px es por convencion*/
+    margin: 0 auto;
+    color: var(--just-white);
+    text-shadow: 0.15em 0.25em 0.5em black;
+   /* font-size: 15px;*/
+  }
+  
+  .form label {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: transparent; /*var(--warm-black); */
+  }
+  
+  .form input {
+    width: 300px;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--black);
+    background-color: var(--just-white);
+  }
+  
+  .currency-table--container select option {
+    width: 50px;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--black);
+    background-color: var(--just-white);
+  }
+  
+  /* estilo del boton*/
+
+  
+.btn-primary-full {
+    /*position: relative;*/
+    display: flex;
+    flex-direction:column;
+    justify-content:center; 
+    width: 60px; 
+    border-radius: 5px;
+    color: var(--off-white);
+    font-size: large;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    background: linear-gradient(207.8deg, #b4b1af 16.69%, #a19f9c 100%);
+  }
+  
+  #opacidad { /* para q no se vea la etiqueta a del enlace para enviar el formulario*/
+    opacity: 0;
+    text-decoration: none;
+  }
+  
+  /* estilo de la respuesta */
+  
+  .respuesta {
+    width: auto;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--black);
+    background-color: var(--just-white);
+  }
+  
+  /* estilo de mfotos de adorno abajo*/
+  .fotoMetales {
+    width: 100%;
+    height: 100px;
+    min-width: 320px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    /*background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    Background-color: transparent; 
+    background: url(./pic/rayas.PNG);
+    color: var(--off-white);
+   /* font-size: large; */
+    text-shadow: 0.1em 0.1em 0.2em black;
+    animation-duration: 10s;
+    animation-name: slidein;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fotoMetales img {
+    width: 300px;
+    height: 100px;
+    
+  }
+  
+  /* estilos menu hamburguesa */
+  
+  .nav-toggle {
+    color: var(--just-white);
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+  
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* estilo de footer */
+  
+  footer {
+    
+    display: flex;
+    min-width: 320px; 
+    width: 100%;
+    height: auto;
+    background: linear-gradient(207.8deg, #F7931A 60%, #201E1C 100%);
+  }
+  
+  footer section {
+    display: flex;
+    width: 50%;
+  /*  min-width: 320px;  */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+    color: var(--just-white);
+    text-shadow: 0.15em 0.25em 0.5em black;
+  }
+  
+  .left li {
+    margin: 10px 0;
+  }
+  
+  .left a {
+    text-decoration: none;
+    color: var(--just-white);
+  }
+  
+  /* tamaño de las fotos de los aceros */ 
+  
+  
+  .serpiente{
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* -------------ESTILOS DISPOSITVIOS CELULARES ----------------------------------------------------------------*/
+  
+  @media (max-width: 768px) {
+   
+  body {
+   
+    padding-top: 70px;  
+    background: url(./pic/fundicion.PNG);  
+  }
+  
+  
+  
+  .header-menu {
+   /* background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    height: 60px;
+   /* width: 100%;
+    position: fixed; /* para q la barra del menu se quede fija */
+   /* top: 0;
+    left: 0; */
+    
+  
+  }
+  
+  header a {
+  text-decoration: none;
+  color: var(--just-white);
+  width: 20px;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  /*font-size: 35px;*/
+  
+  }
+  
+  /* estilo de la barra del menu arriba */
+  .nav {
+    display: flex;
+    justify-content: space-between;  /* esto cloca de lado a lado los elementos*/
+    max-width: 992px; /* este numero 992px es por convencion*/
+    margin: 0 auto;
+  }
+  
+  
+  .home {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+    line-height: 60px; /* queda centrado el objeto entre ariba y abajo */
+  }
+  
+  
+             /*  aca se posicionan los elemntos del menu hambuguesa */
+  .nav-menu {
+    padding: 20px 0;
+    flex-direction: column; /* para colocar el menu de forma horizontal*/
+    align-items: center;
+    margin-right: 20px;
+    list-style: none; /* elimina los puntitos de los elemntos en listas*/
+    background-color: var(--bitcoin-orange); /*var(--grey); */
+    opacity: 0.8; /* para colocar el color semitranparente */
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: calc(100% - 60px); /* le damos el temaño de toda la pagina para el menu esto es para hacer scroll al menu hamburguesa*/
+    overflow: auto; /* esto agrega la barra navegadoa para scroll */
+    
+  
+    left: 100%;
+    transition: left 0.3s;
+  }
+  
+  .nav-menu-item {
+    /*font-size: 18px;
+    margin: 0 10px; */
+    line-height: 70px;
+    /*text-transform: uppercase;
+    width: max-content; */
+    
+  }
+  
+  .nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+   
+  } 
+  
+  .nav-menu-link:hover .nav-menu-link_active{
+    background: none;
+    color: var(--black);
+    transition: 0.5s;
+      
+  }
+  
+  /*
+  .nav-menu-link:hover, .nav-menu-link_active {
+    background: none;
+    color: var(--black);
+    transition: 0.5s;
+    
+  } */
+  
+  
+  
+  /*  estilos del header principal */
+  .header-titulo {
+   /* position: relative;*/ /*lo quite el position por q no dejaba colocar el header del menu arriba*/
+    display: flex;
+    flex-direction:column-reverse;
+   /* justify-content: center;
+    width: 100%;
+    min-width: 320px; /* la dimension mas chica de los celulares 320px*/
+    height: 80px;
+    text-align: center;
+   /* background: url(./pic/fundicion.PNG); /*linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    color: var(--off-white);
+    font-size: large;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    line-height: 80px;
+  }
+  
+  main {
+    
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+   /* background-color: var(--off-white);*/
+  
+  }
+  
+ 
+  
+  .main-exchange-container--title {
+    width: 100%;
+    height: 100px;
+    min-width: 320px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    /*background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    Background-color: transparent; 
+    background: url(./pic/rayas.PNG);
+    color: var(--off-white);
+   /* font-size: large; */
+    text-shadow: 0.1em 0.1em 0.2em black;
+    animation-duration: 10s;
+    animation-name: slidein;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  
+  
+  /* animacion de la cinta */
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  /* estilo de la tabla */
+  
+  .main-tables-container {
+    margin-top: 20px; 
+    margin-bottom: 0px;
+    display: flex;
+    width: 100%;
+    height: 130px;
+    justify-content: center;
+  /*   overflow-x: scroll; /* asi se hace el srcoll vertical para el horizontal seria (overflow-y: scroll)*/
+    overscroll-behavior-x: contain;
+   /* scroll-snap-type: x proximity;*/
+    background: transparent; /*linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);*/
+  }
+  
+  
+  
+  
+  .currency-table--container {
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  
+  .currency-table--container label {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: transparent; /*var(--warm-black); */
+  }
+  
+  .currency-table--container input {
+    width: 80px;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--black);
+    background-color: var(--just-white);
+  }
+  
+  .currency-table--container select option {
+    width: 50px;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--black);
+    background-color: var(--just-white);
+  }
+  
+  /* estilo del boton*/
+  
+  
+  /* estilo de la respuesta */
+  
+  .respuesta {
+    width: auto;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--black);
+    background-color: var(--just-white);
+  }
+  
+  /* estilo de mfotos de adorno abajo*/
+  .fotoMetales {
+    width: 100%;
+    height: 100px;
+    min-width: 320px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    /*background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%); */
+    Background-color: transparent; 
+    background: url(./pic/rayas.PNG);
+    color: var(--off-white);
+   /* font-size: large; */
+    text-shadow: 0.1em 0.1em 0.2em black;
+    animation-duration: 10s;
+    animation-name: slidein;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fotoMetales img {
+    width: 300px;
+    height: 100px;
+    
+  }
+  
+  /* estilos menu hamburguesa */
+  
+  .nav-toggle {
+    color: var(--just-white);
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+  }
+  
+  /* estilo de footer */
+  
+  footer {
+    display: flex;
+    min-width: 320px; 
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(207.8deg, #F7931A 60%, #201E1C 100%);
+  }
+  
+  footer section {
+    display: flex;
+    width: 50%;
+  /*  min-width: 320px;  */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+    color: var(--just-white);
+    text-shadow: 0.15em 0.25em 0.5em black;
+  }
+  
+  .left li {
+    margin: 10px 0;
+  }
+  
+  .left a {
+    text-decoration: none;
+    color: var(--just-white);
+  }
+  
+  
+  
+  .serpiente{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+  
+  .nav-menu_visible {
+    left: 0;
+  }
+  
+  .nav-toggle:focus:not(:focus-visible) { /* funcionalidad para navegar con tabulador */
+    outline: none;
+  }
+  
+  }
+  
