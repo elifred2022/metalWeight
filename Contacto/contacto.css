@@ -204,6 +204,15 @@
     color: var(--black);
     background-color: var(--just-white);
   }
+
+  #message {
+    width: 300px;
+    font-size: 1.6rem;
+    font-weight: 1.9rem;
+    line-height: 1.9rem;
+    color: var(--black);
+    background-color: var(--just-white);
+  }
   
   .currency-table--container select option {
     width: 50px;
